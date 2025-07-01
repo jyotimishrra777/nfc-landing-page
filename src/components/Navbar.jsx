@@ -32,7 +32,7 @@ const Navbar = () => {
             }
           }}
         >
-          <img src="/images/ecodelogo.png" alt="Logo" />
+          <img src="/nfc-landing-page/images/ecodelogo.png" alt="Logo" />
         </span>
 
         <button

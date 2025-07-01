@@ -19,7 +19,7 @@ const Footer = () => {
           {/* Left Section */}
           <div className="col-md-4 mb-4 mb-md-0 text-center text-md-start logo">
             <img
-              src="/images/ecodelogo.png"
+              src="/nfc-landing-page/images/ecodelogo.png"
               alt="Company Logo"
               className=" mb-3"
             />

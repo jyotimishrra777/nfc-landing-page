@@ -7,7 +7,7 @@ import Home from "./pages/Home";
 function App() {
   return (
     <>
-      <Router>
+      <Router basename="/nfc-landing-page">
         <Routes>
           <Route path="/" element={<Home />} />
         </Routes>
