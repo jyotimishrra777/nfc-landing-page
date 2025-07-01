@@ -1,0 +1,141 @@
+.floating-iconss .iconn {
+  position: absolute;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+.floating-iconss img {
+  border-radius: 100px;
+}
+
+.icon-1 {
+  top: 0%;
+  left: 10%;
+  animation: orbit1 6s ease-in-out infinite;
+}
+
+.icon-2 {
+  top: 0%;
+  left: 90%;
+  animation: orbit2 7s ease-in-out infinite;
+}
+
+.icon-3 {
+  top: 50%;
+  left: 0%;
+  animation: orbit3 5s ease-in-out infinite;
+}
+
+.icon-4 {
+  top: 50%;
+  left: 100%;
+  animation: orbit4 8s ease-in-out infinite;
+}
+
+.icon-5 {
+  bottom: 10%;
+  left: 10%;
+  animation: orbit5 6.5s ease-in-out infinite;
+}
+
+.icon-6 {
+  bottom: 10%;
+  left: 90%;
+  animation: orbit6 7.5s ease-in-out infinite;
+}
+
+/* Orbit Animations */
+@keyframes orbit1 {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(10px, -15px);
+  }
+  50% {
+    transform: translate(0, -30px);
+  }
+  75% {
+    transform: translate(-10px, -15px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes orbit2 {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(-12px, 18px);
+  }
+  50% {
+    transform: translate(0, 30px);
+  }
+  75% {
+    transform: translate(12px, 18px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes orbit3 {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(15px, 15px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes orbit4 {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(-20px, -10px);
+  }
+  50% {
+    transform: translate(0, -20px);
+  }
+  75% {
+    transform: translate(20px, -10px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes orbit5 {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(-15px, 10px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes orbit6 {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(10px, 15px);
+  }
+  50% {
+    transform: translate(0, 25px);
+  }
+  75% {
+    transform: translate(-10px, 15px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
