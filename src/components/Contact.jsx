@@ -13,8 +13,8 @@ const validationSchema = Yup.object().shape({
     .required("Mobile number is required")
     .test("is-valid-phone", "Enter a valid mobile number", (value) => {
       if (!value) return false;
-      const cleaned = value.replace(/\D/g, "");
-      return cleaned.length >= 10 && cleaned.length <= 15;
+      const localNumber = value.replace(/^\+\d+\s?/, "").replace(/\D/g, ""); // remove country code and non-digits
+      return localNumber.length >= 7 && localNumber.length <= 12; // local numbers vary by country
     }),
 });
 
@@ -26,6 +26,7 @@ const Contact = () => {
     mobile: "",
   });
   const [errors, setErrors] = useState({});
+  const [phoneTouched, setPhoneTouched] = useState(false);
 
   const validateField = async (fieldName, value) => {
     try {
@@ -68,7 +69,7 @@ const Contact = () => {
       console.log("Submitted data:", cleanedData);
       localStorage.setItem("ContactDetails", JSON.stringify(cleanedData));
 
-      setSuccessMsg("Form is submitted successfully !");
+      setSuccessMsg("Form submitted successfully !");
       setFormValues({
         fullName: "",
         email: "",
@@ -183,18 +184,27 @@ const Contact = () => {
                   <PhoneInput
                     country={"in"}
                     value={formValues.mobile}
-                    onChange={(phone) =>
-                      handleChange({ target: { name: "mobile", value: phone } })
-                    }
+                    onChange={(phone, countryData, e) => {
+                      if (e?.type === "change") {
+                        setPhoneTouched(true);
+                      }
+                      handleChange({
+                        target: { name: "mobile", value: phone },
+                      });
+                    }}
                     inputClass={`form-control mobile-input ${
-                      errors.mobile ? "is-invalid" : ""
+                      errors.mobile && phoneTouched ? "is-invalid" : ""
                     }`}
                     inputProps={{
                       name: "mobile",
                       required: true,
+                      onBlur: () => setPhoneTouched(true),
                     }}
+                    countryCodeEditable={false}
+                    disableDropdown={false}
+                    disableCountryCode={false}
                   />
-                  {errors.mobile && (
+                  {errors.mobile && phoneTouched && (
                     <div className="invalid-feedback d-block">
                       {errors.mobile}
                     </div>
