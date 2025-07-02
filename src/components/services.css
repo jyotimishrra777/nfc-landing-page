@@ -61,16 +61,17 @@
 }
 
 .common-btn.get-btn {
-  background-color: #fff;
-  color: #000;
+  background: linear-gradient(94deg, #07168c 0.47%, #2bd483 99.53%);
+  color: #fff;
   border: none;
   border-radius: 24px;
   /* font-size: 0.9rem; */
   transition: all 0.3s ease;
+  cursor: pointer;
 }
 
 .common-btn.get-btn:hover {
-  background-color: #000;
+  background: linear-gradient(94deg, #07168c 0.47%, #2bd483 99.53%);
   color: #fff;
 }
 

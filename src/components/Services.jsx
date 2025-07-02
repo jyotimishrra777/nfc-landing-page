@@ -178,7 +178,7 @@ const Services = () => {
 
                 <div className="card-footer">
                   <span className="brand-text normal">✨ {card.brandText}</span>
-                  <div className="fw-bold px-4 py-2 common-btn get-btn  hover">
+                  <div className=" px-4 py-2 common-btn get-btn  hover">
                     Read more
                   </div>
                 </div>

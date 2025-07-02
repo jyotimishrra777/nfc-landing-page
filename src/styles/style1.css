@@ -72,7 +72,7 @@ body {
 }
 
 .navbar-toggler {
-  background: #0d47a1 !important;
+  background: #26b984 !important;
 }
 /* Landing page content */
 
@@ -302,7 +302,7 @@ li {
   border-radius: 100px;
 }
 .topArrow {
-  background: #570c9a;
+  background: linear-gradient(94deg, #07168c 0.47%, #2bd483 99.53%);
   position: fixed;
   bottom: 20px;
   right: 10px;
