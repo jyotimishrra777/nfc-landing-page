@@ -56,7 +56,7 @@ body {
   border-radius: 20px;
   border: none;
   outline: none;
-  font-size: 20px;
+  font-size: 18px;
 }
 .contact-btn {
   background: linear-gradient(94deg, #07168c 0.47%, #2bd483 99.53%);
@@ -67,8 +67,8 @@ body {
   background: linear-gradient(31deg, #0c23db 0.47%, #069f55 99.53%);
 }
 .links {
-  font-size: 20px !important;
-  color: #3c0558 !important;
+  font-size: 18px !important;
+  color: black !important;
 }
 
 .navbar-toggler {
